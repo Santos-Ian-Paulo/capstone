@@ -3,7 +3,7 @@ from datetime import datetime
 
 client = MongoClient("mongodb://localhost:27017/")
 db = client["capstone_repository"]
-collection = db("capstones")
+collection = db["capstones"]
 
 def validate_capstone(doc):
     required_fields = [
@@ -22,4 +22,5 @@ def validate_capstone(doc):
             raise ValueError(f"Missing field: {field}")
         
     if doc["specialization"] not in ["web", "database", "network"]:
+
         raise ValueError("Invalid specialization")
