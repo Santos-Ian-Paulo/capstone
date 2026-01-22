@@ -24,3 +24,6 @@ def validate_capstone(doc):
     if doc["specialization"] not in ["web", "database", "network"]:
 
         raise ValueError("Invalid specialization")
+
+validate_capstone(capstone)
+collection.insert_one(capstone)
