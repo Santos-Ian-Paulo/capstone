@@ -1,2 +1,2 @@
 # capstone
-capstone code shits
+capstone code 
